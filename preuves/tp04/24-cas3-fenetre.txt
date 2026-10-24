@@ -1,0 +1,47 @@
+
+===== Table pix_rafales_emetteur (HAVING COUNT(*) > 50), requête push depuis le début =====
+{"columns": ["EMITTER_TAX_ID", "WINDOWSTART", "WINDOWEND", "NB_PIX_MINUTE"], "row_count": 6, "error": null}
+["TAX-0004", 1792869600000, 1792869660000, 73]
+["TAX-0001", 1792869600000, 1792869660000, 73]
+["TAX-0005", 1792869600000, 1792869660000, 73]
+["TAX-0003", 1792869600000, 1792869660000, 74]
+["TAX-0006", 1792869600000, 1792869660000, 73]
+["TAX-0002", 1792869600000, 1792869660000, 74]
+
+===== Toutes les fenêtres, sans seuil (requête push transitoire) =====
+{"columns": ["EMITTER_TAX_ID", "FENETRE_DEBUT", "NB"], "row_count": 12, "error": null}
+["TAX-0006", 1792869600000, 73]
+["TAX-0006", 1792869660000, 27]
+["TAX-0002", 1792869600000, 74]
+["TAX-0002", 1792869660000, 26]
+["TAX-0003", 1792869600000, 74]
+["TAX-0004", 1792869600000, 73]
+["TAX-0005", 1792869600000, 73]
+["TAX-0003", 1792869660000, 26]
+["TAX-0004", 1792869660000, 27]
+["TAX-0001", 1792869600000, 73]
+["TAX-0001", 1792869660000, 27]
+["TAX-0005", 1792869660000, 27]
+
+===== Synthèse : valeur finale par (émetteur, fenêtre) =====
+-- Seuil > 50 (table) : 6 fenêtre(s)
+   TAX-0001  fenêtre_début=1792869600000  nb=73
+   TAX-0002  fenêtre_début=1792869600000  nb=74
+   TAX-0003  fenêtre_début=1792869600000  nb=74
+   TAX-0004  fenêtre_début=1792869600000  nb=73
+   TAX-0005  fenêtre_début=1792869600000  nb=73
+   TAX-0006  fenêtre_début=1792869600000  nb=73
+-- Sans seuil : 12 fenêtre(s)
+   TAX-0001  fenêtre_début=1792869600000  nb=73
+   TAX-0001  fenêtre_début=1792869660000  nb=27
+   TAX-0002  fenêtre_début=1792869600000  nb=74
+   TAX-0002  fenêtre_début=1792869660000  nb=26
+   TAX-0003  fenêtre_début=1792869600000  nb=74
+   TAX-0003  fenêtre_début=1792869660000  nb=26
+   TAX-0004  fenêtre_début=1792869600000  nb=73
+   TAX-0004  fenêtre_début=1792869660000  nb=27
+   TAX-0005  fenêtre_début=1792869600000  nb=73
+   TAX-0005  fenêtre_début=1792869660000  nb=27
+   TAX-0006  fenêtre_début=1792869600000  nb=73
+   TAX-0006  fenêtre_début=1792869660000  nb=27
+Émetteurs signalés : 6 / 6

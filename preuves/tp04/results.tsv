@@ -1,0 +1,43 @@
+p1_pg_total	600
+p1_pg_validated	600
+p1_pg_ge150	144
+p1_validated_topic	600
+p1_ksql_sum_count	600
+p1_cas1_topic_count	144
+p1_cas1_push_rows	144
+p1_cas2_output_updates	6
+p1_changelog_topic	_confluent-ksql-simulpix_ksql_query_CTAS_PIX_PAR_EMETTEUR_5-Aggregate-Aggregate-Materialize-changelog
+p1_changelog_messages	6
+p1_repartition_messages	600
+p1_cas3_emetteurs_signales	6
+p1_cas4_topic_count	600
+p1_cas5_tax0003	TAX-0003 | 100 | 10000.0
+p2_at_least_once_kill15_base	1200
+p2_at_least_once_kill15_ksql	1686
+p2_at_least_once_kill15_avant_crash	ksqlDB=486 base=486
+p2_at_least_once_kill15_exit	0
+p2_at_least_once_kill25_base	1200
+p2_at_least_once_kill25_ksql	1338
+p2_at_least_once_kill25_avant_crash	ksqlDB=618 base=618
+p2_at_least_once_kill25_exit	0
+p2_at_least_once_kill35_base	1200
+p2_at_least_once_kill35_ksql	1489
+p2_at_least_once_kill35_avant_crash	ksqlDB=884 base=924
+p2_at_least_once_kill35_exit	0
+p2_exactly_once_v2_kill15_base	1200
+p2_exactly_once_v2_kill15_ksql	1200
+p2_exactly_once_v2_kill15_avant_crash	ksqlDB=480 base=486
+p2_exactly_once_v2_kill15_exit	0
+p2_exactly_once_v2_kill25_base	1200
+p2_exactly_once_v2_kill25_ksql	1200
+p2_exactly_once_v2_kill25_avant_crash	ksqlDB=469 base=597
+p2_exactly_once_v2_kill25_exit	0
+p2_exactly_once_v2_kill35_base	1200
+p2_exactly_once_v2_kill35_ksql	1200
+p2_exactly_once_v2_kill35_avant_crash	ksqlDB=656 base=884
+p2_exactly_once_v2_kill35_exit	0
+p3_raw_topic	1260
+p3_validated_topic	1260
+p3_pg_validated	1200
+p3_ksql_naif	1260
+p3_ksql_dedup	1200

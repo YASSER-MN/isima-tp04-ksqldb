@@ -1,0 +1,25 @@
+Debug Options: 
+Oct 24, 2026 7:24:54 PM org.jline.utils.Log logr
+WARNING: Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
++-----+-----+-----+
+|EMITT|NB_PI|MONTA|
+|ER_TA|X    |NT_TO|
+|X_ID |     |TAL  |
++-----+-----+-----+
+|TAX-0|100  |10000|
+|003  |     |.0   |
+Query terminated
+{
+  "columns": [
+    "EMITTER_TAX_ID",
+    "NB_PIX",
+    "MONTANT_TOTAL"
+  ],
+  "rows": [
+    [
+      "TAX-0003",
+      100,
+      10000.0
+    ]
+  ]
+}

@@ -1,0 +1,20 @@
+
+===== Topic changelog =====
+_confluent-ksql-simulpix_ksql_query_CTAS_PIX_PAR_EMETTEUR_5-Aggregate-Aggregate-Materialize-changelog
+messages : 6
+
+===== 20 premiers messages (partition, offset, clé, valeur) =====
+Partition:5 | Offset:0 | TAX-0002 | {"EMITTER_TAX_ID":"TAX-0002","ROWTIME":1792869671292,"AMOUNT":178.75,"KSQL_AGG_VARIABLE_0":100,"KSQL_AGG_VARIABLE_1":10375.0}
+Partition:1 | Offset:0 | TAX-0006 | {"EMITTER_TAX_ID":"TAX-0006","ROWTIME":1792869672276,"AMOUNT":193.75,"KSQL_AGG_VARIABLE_0":100,"KSQL_AGG_VARIABLE_1":10375.0}
+Partition:2 | Offset:0 | TAX-0004 | {"EMITTER_TAX_ID":"TAX-0004","ROWTIME":1792869671325,"AMOUNT":186.25,"KSQL_AGG_VARIABLE_0":100,"KSQL_AGG_VARIABLE_1":10375.0}
+Partition:2 | Offset:1 | TAX-0005 | {"EMITTER_TAX_ID":"TAX-0005","ROWTIME":1792869672265,"AMOUNT":190.0,"KSQL_AGG_VARIABLE_0":100,"KSQL_AGG_VARIABLE_1":10000.0}
+Partition:3 | Offset:0 | TAX-0003 | {"EMITTER_TAX_ID":"TAX-0003","ROWTIME":1792869671304,"AMOUNT":182.5,"KSQL_AGG_VARIABLE_0":100,"KSQL_AGG_VARIABLE_1":10000.0}
+Partition:3 | Offset:1 | TAX-0001 | {"EMITTER_TAX_ID":"TAX-0001","ROWTIME":1792869672270,"AMOUNT":10.0,"KSQL_AGG_VARIABLE_0":100,"KSQL_AGG_VARIABLE_1":10000.0}
+Processed a total of 6 messages
+
+===== Topic de repartition =====
+_confluent-ksql-simulpix_ksql_query_CTAS_PIX_PAR_EMETTEUR_5-Aggregate-GroupBy-repartition
+messages : 600
+
+===== 5 premiers messages =====
+Processed a total of 0 messages

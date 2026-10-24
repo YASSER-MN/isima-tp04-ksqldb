@@ -1,0 +1,98 @@
+Debug Options: 
+Oct 24, 2026 7:22:09 PM org.jline.utils.Log logr
+WARNING: Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+
+SHOW STREAMS;
+ Stream Name          | Kafka Topic                        | Key Format | Value Format | Windowed 
+
+ CLIENTS_FLUX         | simulpix.ksql.clients              | KAFKA      | JSON         | false    
+ KSQL_PROCESSING_LOG  | simulpix_ksql_ksql_processing_log  | KAFKA      | JSON         | false    
+ PIX_MONTANT_ELEVE    | simulpix.ksql.pix_montant_eleve    | KAFKA      | JSON         | false    
+ PIX_VALIDES          | simulpix.transactions.validated    | KAFKA      | JSON         | false    
+ PIX_VALIDES_ENRICHIS | simulpix.ksql.pix_valides_enrichis | KAFKA      | JSON         | false    
+
+
+SHOW TABLES;
+ Table Name           | Kafka Topic                        | Key Format | Value Format | Windowed 
+
+ CLIENTS              | simulpix.ksql.clients              | KAFKA      | JSON         | false    
+ PIX_PAR_EMETTEUR     | simulpix.ksql.pix_par_emetteur     | KAFKA      | JSON         | false    
+ PIX_RAFALES_EMETTEUR | simulpix.ksql.pix_rafales_emetteur | KAFKA      | JSON         | true     
+
+
+SHOW QUERIES;
+ Query ID                     | Query Type | Status    | Sink Name            | Sink Kafka Topic                   | Query String                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+ CTAS_PIX_RAFALES_EMETTEUR_7  | PERSISTENT | RUNNING:1 | PIX_RAFALES_EMETTEUR | simulpix.ksql.pix_rafales_emetteur | CREATE TABLE IF NOT EXISTS PIX_RAFALES_EMETTEUR WITH (CLEANUP_POLICY='compact,delete', KAFKA_TOPIC='simulpix.ksql.pix_rafales_emetteur', PARTITIONS=6, REPLICAS=3, RETENTION_MS=604800000) AS SELECT   PIX_VALIDES.EMITTER_TAX_ID EMITTER_TAX_ID,   COUNT(*) NB_PIX_MINUTE FROM PIX_VALIDES PIX_VALIDES WINDOW TUMBLING ( SIZE 1 MINUTES )  GROUP BY PIX_VALIDES.EMITTER_TAX_ID HAVING (COUNT(*) > 50) EMIT CHANGES;                            
+ CSAS_PIX_MONTANT_ELEVE_3     | PERSISTENT | RUNNING:1 | PIX_MONTANT_ELEVE    | simulpix.ksql.pix_montant_eleve    | CREATE STREAM IF NOT EXISTS PIX_MONTANT_ELEVE WITH (CLEANUP_POLICY='delete', KAFKA_TOPIC='simulpix.ksql.pix_montant_eleve', PARTITIONS=6, REPLICAS=3, RETENTION_MS=604800000) AS SELECT   PIX_VALIDES.TRANSACTION_ID TRANSACTION_ID,   PIX_VALIDES.EMITTER_TAX_ID EMITTER_TAX_ID,   PIX_VALIDES.BENEFICIARY_TAX_ID BENEFICIARY_TAX_ID,   PIX_VALIDES.AMOUNT AMOUNT FROM PIX_VALIDES PIX_VALIDES WHERE (PIX_VALIDES.AMOUNT >= 150) EMIT CHANGES; 
+ CTAS_PIX_PAR_EMETTEUR_5      | PERSISTENT | RUNNING:1 | PIX_PAR_EMETTEUR     | simulpix.ksql.pix_par_emetteur     | CREATE TABLE IF NOT EXISTS PIX_PAR_EMETTEUR WITH (CLEANUP_POLICY='compact', KAFKA_TOPIC='simulpix.ksql.pix_par_emetteur', PARTITIONS=6, REPLICAS=3, RETENTION_MS=604800000) AS SELECT   PIX_VALIDES.EMITTER_TAX_ID EMITTER_TAX_ID,   COUNT(*) NB_PIX,   ROUND(SUM(PIX_VALIDES.AMOUNT), 2) MONTANT_TOTAL FROM PIX_VALIDES PIX_VALIDES GROUP BY PIX_VALIDES.EMITTER_TAX_ID EMIT CHANGES;                                                          
+ CSAS_PIX_VALIDES_ENRICHIS_13 | PERSISTENT | RUNNING:1 | PIX_VALIDES_ENRICHIS | simulpix.ksql.pix_valides_enrichis | CREATE STREAM IF NOT EXISTS PIX_VALIDES_ENRICHIS WITH (CLEANUP_POLICY='delete', KAFKA_TOPIC='simulpix.ksql.pix_valides_enrichis', PARTITIONS=6, REPLICAS=3, RETENTION_MS=604800000) AS SELECT   P.TRANSACTION_ID TRANSACTION_ID,   P.EMITTER_TAX_ID EMITTER_TAX_ID,   C.NAME EMETTEUR,   P.AMOUNT AMOUNT FROM PIX_VALIDES P INNER JOIN CLIENTS C ON ((P.EMITTER_TAX_ID = C.TAX_ID)) EMIT CHANGES;                                               
+
+For detailed information on a Query run: EXPLAIN <Query ID>;
+
+DESCRIBE pix_par_emetteur EXTENDED;
+Name                 : PIX_PAR_EMETTEUR
+Type                 : TABLE
+Timestamp field      : Not set - using <ROWTIME>
+Key format           : KAFKA
+Value format         : JSON
+Kafka topic          : simulpix.ksql.pix_par_emetteur (partitions: 6, replication: 3)
+Statement            : CREATE TABLE IF NOT EXISTS PIX_PAR_EMETTEUR WITH (CLEANUP_POLICY='compact', KAFKA_TOPIC='simulpix.ksql.pix_par_emetteur', PARTITIONS=6, REPLICAS=3, RETENTION_MS=604800000) AS SELECT
+  PIX_VALIDES.EMITTER_TAX_ID EMITTER_TAX_ID,
+  COUNT(*) NB_PIX,
+  ROUND(SUM(PIX_VALIDES.AMOUNT), 2) MONTANT_TOTAL
+FROM PIX_VALIDES PIX_VALIDES
+GROUP BY PIX_VALIDES.EMITTER_TAX_ID
+EMIT CHANGES;
+
+ Field          | Type                           
+
+ EMITTER_TAX_ID | VARCHAR(STRING)  (primary key) 
+ NB_PIX         | BIGINT                         
+ MONTANT_TOTAL  | DOUBLE                         
+
+
+Queries that write from this TABLE
+-----------------------------------
+CTAS_PIX_PAR_EMETTEUR_5 (RUNNING) : CREATE TABLE IF NOT EXISTS PIX_PAR_EMETTEUR WITH (CLEANUP_POLICY='compact', KAFKA_TOPIC='simulpix.ksql.pix_par_emetteur', PARTITIONS=6, REPLICAS=3, RETENTION_MS=604800000) AS SELECT   PIX_VALIDES.EMITTER_TAX_ID EMITTER_TAX_ID,   COUNT(*) NB_PIX,   ROUND(SUM(PIX_VALIDES.AMOUNT), 2) MONTANT_TOTAL FROM PIX_VALIDES PIX_VALIDES GROUP BY PIX_VALIDES.EMITTER_TAX_ID EMIT CHANGES;
+
+For query topology and execution plan please run: EXPLAIN <QueryId>
+
+Runtime statistics by host
+-------------------------
+ Host               | Metric           | Value      | Last Message             
+
+ ksqldb-server:8088 | messages-per-sec |          0 | 2026-10-24T19:21:48.592Z 
+ ksqldb-server:8088 | total-messages   |          6 | 2026-10-24T19:21:48.592Z 
+
+(Statistics of the local KSQL server interaction with the Kafka topic simulpix.ksql.pix_par_emetteur)
+
+Consumer Groups summary:
+
+Consumer Group       : _confluent-ksql-simulpix_ksql_query_CTAS_PIX_PAR_EMETTEUR_5
+
+Kafka topic          : simulpix.transactions.validated
+Max lag              : 0
+
+ Partition | Start Offset | End Offset | Offset | Lag 
+
+ 0         | 0            | 100        | 100    | 0   
+ 1         | 0            | 0          | 0      | 0   
+ 2         | 0            | 0          | 0      | 0   
+ 3         | 0            | 100        | 100    | 0   
+ 4         | 0            | 200        | 200    | 0   
+ 5         | 0            | 200        | 200    | 0   
+
+
+Kafka topic          : _confluent-ksql-simulpix_ksql_query_CTAS_PIX_PAR_EMETTEUR_5-Aggregate-GroupBy-repartition
+Max lag              : 0
+
+ Partition | Start Offset | End Offset | Offset | Lag 
+
+ 0         | 0            | 0          | 0      | 0   
+ 1         | 0            | 100        | 100    | 0   
+ 2         | 0            | 200        | 200    | 0   
+ 3         | 0            | 200        | 200    | 0   
+ 4         | 0            | 0          | 0      | 0   
+ 5         | 0            | 100        | 100    | 0   
+

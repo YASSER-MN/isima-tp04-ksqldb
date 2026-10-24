@@ -1,0 +1,24 @@
+
+===== Topics après création des requêtes =====
+__consumer_offsets
+__transaction_state
+_confluent-ksql-simulpix_ksql__command_topic
+_confluent-ksql-simulpix_ksql_query_CSAS_PIX_VALIDES_ENRICHIS_13-Join-repartition
+_confluent-ksql-simulpix_ksql_query_CSAS_PIX_VALIDES_ENRICHIS_13-KafkaTopic_Right-Reduce-changelog
+_confluent-ksql-simulpix_ksql_query_CTAS_PIX_PAR_EMETTEUR_5-Aggregate-Aggregate-Materialize-changelog
+_confluent-ksql-simulpix_ksql_query_CTAS_PIX_PAR_EMETTEUR_5-Aggregate-GroupBy-repartition
+_confluent-ksql-simulpix_ksql_query_CTAS_PIX_RAFALES_EMETTEUR_7-Aggregate-Aggregate-Materialize-changelog
+_confluent-ksql-simulpix_ksql_query_CTAS_PIX_RAFALES_EMETTEUR_7-Aggregate-GroupBy-repartition
+simulpix.ksql.clients
+simulpix.ksql.pix_montant_eleve
+simulpix.ksql.pix_par_emetteur
+simulpix.ksql.pix_rafales_emetteur
+simulpix.ksql.pix_valides_enrichis
+simulpix.transactions.checked
+simulpix.transactions.decision
+simulpix.transactions.outcome
+simulpix.transactions.raw
+simulpix.transactions.rejected
+simulpix.transactions.retry
+simulpix.transactions.validated
+simulpix_ksql_ksql_processing_log
