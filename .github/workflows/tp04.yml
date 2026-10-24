@@ -1,0 +1,64 @@
+name: TP 04 ksqlDB — exécution et preuves
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tp04/**"
+      - "infra/ksqldb/**"
+      - ".github/workflows/tp04.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tp04
+  cancel-in-progress: true
+
+jobs:
+  tp04:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Libérer de l'espace disque
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+          df -h /
+
+      - name: Machine et Docker
+        run: |
+          nproc; free -h
+          docker version
+          docker compose version
+
+      - name: Pré-télécharger les images (dont ksqlDB)
+        run: docker compose --profile ksqldb pull --ignore-buildable || docker compose --profile ksqldb pull || true
+
+      - name: Exécuter le TP 04
+        run: bash tp04/run-tp04.sh
+
+      - name: Journaux en cas d'échec
+        if: failure()
+        run: |
+          docker compose --profile ksqldb ps -a || true
+          docker compose --profile ksqldb logs --tail 80 ksqldb-server || true
+
+      - name: Archiver les preuves
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preuves-tp04
+          path: preuves/tp04
+
+      - name: Publier les preuves sur la branche results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B results
+          git add -f preuves/tp04
+          git commit -m "TP 04 : preuves du run ${GITHUB_RUN_ID}" || true
+          git push -f origin results
