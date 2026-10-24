@@ -87,6 +87,8 @@ log "TP 04 — démarrage"
 
 log "Démarrage de la plateforme (./start.sh)"
 chmod +x start.sh stop.sh scripts/*.sh infra/kafka/scripts/*.sh infra/scripts/*.sh 2>/dev/null || true
+# Un clone neuf n'a pas ce répertoire (ignoré par Git) : generate-secrets.sh échoue sans lui.
+mkdir -p infra/kafka/secrets
 ./start.sh > "$OUT/02-start.txt" 2>&1 || { log "ÉCHEC start.sh"; tail -40 "$OUT/02-start.txt"; exit 1; }
 dc ps > "$OUT/03-docker-ps.txt" 2>&1
 
