@@ -77,6 +77,16 @@ wait_ksql_sum() { # wait_ksql_sum TABLE ATTENDU TIMEOUT : attend que la somme de
   echo "$v"; return 1
 }
 section() { printf '\n===== %s =====\n' "$1"; }
+wipe_ksql() { # repart d'un ksqlDB vierge : conteneur supprimé, topics internes et de sortie effacés
+  # Nécessaire entre les parties : un TERMINATE ALL sur un serveur chargé peut dépasser
+  # le délai du command topic, et ksql-semantique.sh s'arrête alors avant de mesurer.
+  dck rm -sf ksqldb-server >/dev/null 2>&1 || true
+  local pattern
+  for pattern in '_confluent-ksql-simulpix_ksql_.*' 'simulpix_ksql_.*' 'simulpix\.ksql\..*'; do
+    kbin kafka-topics.sh --command-config /config/client.properties --delete --topic "$pattern" >/dev/null 2>&1 || true
+  done
+  sleep 10
+}
 
 # ---------------------------------------------------------------------------
 log "TP 04 — démarrage"
@@ -211,6 +221,7 @@ for guarantee in at_least_once exactly_once_v2; do
   for kill_after in $KILL_TIMES; do
     file="$OUT/30-crash-${guarantee}-kill${kill_after}s.txt"
     log "PARTIE 2 — $guarantee, SIGKILL après ${kill_after} s"
+    wipe_ksql
     ./scripts/ksql-semantique.sh "$guarantee" 1200 20 "$kill_after" 10 > "$file" 2>&1
     code=$?
     base="$(grep -E 'Pix validés en base' "$file" | awk -F: '{gsub(/ /,"",$NF); print $NF}')"
@@ -227,10 +238,9 @@ done
 # PARTIE 3 — extension : doublons en entrée sous exactly_once_v2
 # ---------------------------------------------------------------------------
 log "PARTIE 3 — ksqlDB en exactly_once_v2, 1200 Pix avec 5 % de doublons injectés"
-{
-  ./scripts/ksql.sh --file /sql/tp14-reset.sql || true
-  SIMULPIX_KSQL_PROCESSING_GUARANTEE=exactly_once_v2 dck up -d --no-deps --force-recreate ksqldb-server
-} > "$OUT/40-extension-preparation.txt" 2>&1
+wipe_ksql
+SIMULPIX_KSQL_PROCESSING_GUARANTEE=exactly_once_v2 dck up -d --no-deps --force-recreate ksqldb-server \
+  > "$OUT/40-extension-preparation.txt" 2>&1
 wait_ksql
 SIMULPIX_KAFKA_AMBIGUOUS_ACK_DUPLICATE_PERCENT=5 ./scripts/run-scenario.sh nominal 1200 20 >> "$OUT/40-extension-preparation.txt" 2>&1
 pg3="$(wait_pg 1200 300)"
