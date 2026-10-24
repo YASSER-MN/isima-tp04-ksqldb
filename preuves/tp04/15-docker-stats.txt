@@ -1,0 +1,17 @@
+CONTAINER ID   NAME                    CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O        PIDS
+aca3503613d0   ksqldb-server           26.35%    725.4MiB / 15.61GiB   4.54%     4.77MB / 1.61MB   0B / 4.9MB       269
+13bbddfca06d   pix-traffic-shaper      0.01%     13.01MiB / 15.61GiB   0.08%     48.2kB / 51.8kB   0B / 94.2kB      2
+f034dd41293c   generator               0.02%     16.81MiB / 15.61GiB   0.11%     101kB / 444kB     0B / 143kB       7
+11757229299c   pix-scenario-planner    0.01%     11.5MiB / 15.61GiB    0.07%     6.16kB / 6.38kB   0B / 77.8kB      2
+3056df8321ef   persister-rejected      0.09%     25.08MiB / 15.61GiB   0.16%     193kB / 163kB     0B / 762kB       8
+3f7bf75241dc   pix-outcome-publisher   0.09%     16.66MiB / 15.61GiB   0.10%     1.07MB / 1.09MB   0B / 131kB       13
+a1b558e6fc4b   service-health          0.02%     31.2MiB / 15.61GiB    0.20%     274kB / 226kB     0B / 963kB       3
+de2d68acd2cb   pix-decision-engine     0.09%     16.86MiB / 15.61GiB   0.11%     1.13MB / 2.06MB   0B / 152kB       14
+51d7f9575d6e   pix-validator           0.09%     14.48MiB / 15.61GiB   0.09%     821kB / 1.02MB    0B / 94.2kB      14
+659b0c871656   persister-valid         0.09%     24.96MiB / 15.61GiB   0.16%     1.52MB / 1.02MB   0B / 762kB       8
+7f037aed719e   grafana                 0.02%     66.5MiB / 15.61GiB    0.42%     64.4kB / 15kB     0B / 25.1MB      12
+23e288f2c346   kafka-2                 2.64%     599MiB / 15.61GiB     3.75%     7MB / 6.99MB      4.1kB / 9.93MB   109
+09ac16af147e   kafka-3                 4.33%     635.4MiB / 15.61GiB   3.97%     7.61MB / 10.4MB   0B / 9.65MB      110
+96b3f0b3114f   kafka-1                 2.61%     621.9MiB / 15.61GiB   3.89%     7.45MB / 7.42MB   4.1kB / 10.7MB   109
+02358f716d7a   influxdb                0.01%     52.65MiB / 15.61GiB   0.33%     56.1kB / 22.4kB   0B / 2.37MB      9
+f90446317a82   postgres                0.01%     30.27MiB / 15.61GiB   0.19%     655kB / 297kB     0B / 59.5MB      8

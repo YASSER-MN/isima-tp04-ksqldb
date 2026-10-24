@@ -1,0 +1,13 @@
+
+===== Requête push sur pix_montant_eleve (depuis le début) =====
+{"columns": ["TRANSACTION_ID", "EMITTER_TAX_ID", "BENEFICIARY_TAX_ID", "AMOUNT"], "row_count": 144, "error": null}
+["tx-00000042", "TAX-0001", "TAX-0002", 167.5]
+["tx-00000043", "TAX-0002", "TAX-0003", 171.25]
+["tx-00000048", "TAX-0001", "TAX-0002", 190.0]
+["tx-00000049", "TAX-0002", "TAX-0003", 193.75]
+["tx-00000090", "TAX-0001", "TAX-0002", 160.0]
+["tx-00000091", "TAX-0002", "TAX-0003", 163.75]
+["tx-00000096", "TAX-0001", "TAX-0002", 182.5]
+
+===== Nombre de messages dans simulpix.ksql.pix_montant_eleve =====
+144

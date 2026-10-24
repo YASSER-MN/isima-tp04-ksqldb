@@ -1,0 +1,61 @@
+[19:17:55] TP 04 — démarrage
+[19:17:55] Démarrage de la plateforme (./start.sh)
+[19:18:23] PARTIE 1 — flux nominal 600 Pix à 10 Pix/s
+[19:21:22] RESULTAT p1_pg_total = 600
+[19:21:24] RESULTAT p1_pg_validated = 600
+[19:21:24] RESULTAT p1_pg_ge150 = 144
+[19:21:26] RESULTAT p1_validated_topic = 600
+[19:21:26] Création des requêtes ksqlDB (tp14-pix.sql, garantie par défaut)
+[19:22:06] RESULTAT p1_ksql_sum_count = 600
+[19:22:14] Cas 1 — filtre amount >= 150
+[19:22:38] RESULTAT p1_cas1_topic_count = 144
+[19:22:59] RESULTAT p1_cas1_push_rows = 144
+[19:22:59] Cas 2 — agrégation par émetteur
+[19:23:02] RESULTAT p1_cas2_output_updates = 6
+[19:23:02] Changelog de pix_par_emetteur
+[19:23:30] RESULTAT p1_changelog_topic = _confluent-ksql-simulpix_ksql_query_CTAS_PIX_PAR_EMETTEUR_5-Aggregate-Aggregate-Materialize-changelog
+[19:23:31] RESULTAT p1_changelog_messages = 6
+[19:23:32] RESULTAT p1_repartition_messages = 600
+[19:23:33] Cas 3 — fenêtre d'une minute
+[19:24:26] RESULTAT p1_cas3_emetteurs_signales = 6
+[19:24:26] Cas 4 — jointure
+[19:24:51] RESULTAT p1_cas4_topic_count = 600
+[19:24:51] Cas 5 — requête pull
+[19:24:55] RESULTAT p1_cas5_tax0003 = TAX-0003 | 100 | 10000.0
+[19:24:55] PARTIE 2 — at_least_once, SIGKILL après 15 s
+[19:28:46] RESULTAT p2_at_least_once_kill15_base = 1200
+[19:28:46] RESULTAT p2_at_least_once_kill15_ksql = 1686
+[19:28:46] RESULTAT p2_at_least_once_kill15_avant_crash = ksqlDB=486 base=486
+[19:28:46] RESULTAT p2_at_least_once_kill15_exit = 0
+[19:28:46] PARTIE 2 — at_least_once, SIGKILL après 25 s
+[19:32:33] RESULTAT p2_at_least_once_kill25_base = 1200
+[19:32:33] RESULTAT p2_at_least_once_kill25_ksql = 1338
+[19:32:33] RESULTAT p2_at_least_once_kill25_avant_crash = ksqlDB=618 base=618
+[19:32:33] RESULTAT p2_at_least_once_kill25_exit = 0
+[19:32:33] PARTIE 2 — at_least_once, SIGKILL après 35 s
+[19:36:35] RESULTAT p2_at_least_once_kill35_base = 1200
+[19:36:35] RESULTAT p2_at_least_once_kill35_ksql = 1489
+[19:36:35] RESULTAT p2_at_least_once_kill35_avant_crash = ksqlDB=884 base=924
+[19:36:35] RESULTAT p2_at_least_once_kill35_exit = 0
+[19:36:35] PARTIE 2 — exactly_once_v2, SIGKILL après 15 s
+[19:40:29] RESULTAT p2_exactly_once_v2_kill15_base = 1200
+[19:40:29] RESULTAT p2_exactly_once_v2_kill15_ksql = 1200
+[19:40:29] RESULTAT p2_exactly_once_v2_kill15_avant_crash = ksqlDB=480 base=486
+[19:40:29] RESULTAT p2_exactly_once_v2_kill15_exit = 0
+[19:40:29] PARTIE 2 — exactly_once_v2, SIGKILL après 25 s
+[19:44:21] RESULTAT p2_exactly_once_v2_kill25_base = 1200
+[19:44:21] RESULTAT p2_exactly_once_v2_kill25_ksql = 1200
+[19:44:21] RESULTAT p2_exactly_once_v2_kill25_avant_crash = ksqlDB=469 base=597
+[19:44:21] RESULTAT p2_exactly_once_v2_kill25_exit = 0
+[19:44:21] PARTIE 2 — exactly_once_v2, SIGKILL après 35 s
+[19:48:30] RESULTAT p2_exactly_once_v2_kill35_base = 1200
+[19:48:30] RESULTAT p2_exactly_once_v2_kill35_ksql = 1200
+[19:48:30] RESULTAT p2_exactly_once_v2_kill35_avant_crash = ksqlDB=656 base=884
+[19:48:30] RESULTAT p2_exactly_once_v2_kill35_exit = 0
+[19:48:30] PARTIE 3 — ksqlDB en exactly_once_v2, 1200 Pix avec 5 % de doublons injectés
+[19:52:48] RESULTAT p3_raw_topic = 1260
+[19:52:50] RESULTAT p3_validated_topic = 1260
+[19:52:50] RESULTAT p3_pg_validated = 1200
+[19:52:50] RESULTAT p3_ksql_naif = 1260
+[19:52:50] RESULTAT p3_ksql_dedup = 1200
+[19:52:52] TP 04 — terminé

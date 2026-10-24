@@ -1,0 +1,18 @@
+
+===== Vérité terrain PostgreSQL (après drainage) =====
+validated_transactions : 600
+rejected_transactions  : 0
+
+===== Par émetteur (count, somme des montants) =====
+TAX-0001 | 100 | 10000.00
+TAX-0002 | 100 | 10375.00
+TAX-0003 | 100 | 10000.00
+TAX-0004 | 100 | 10375.00
+TAX-0005 | 100 | 10000.00
+TAX-0006 | 100 | 10375.00
+
+===== Pix validés avec montant >= 150 =====
+144
+
+===== Messages dans le topic validated (offsets de fin, sans transaction) =====
+600

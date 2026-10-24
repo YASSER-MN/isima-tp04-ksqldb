@@ -1,0 +1,701 @@
+[simulpix] starting platform
+Unable to find image 'eclipse-temurin:17-jre' locally
+17-jre: Pulling from library/eclipse-temurin
+435bf5c20694: Pulling fs layer
+d9d511d19a19: Pulling fs layer
+6ff07f99d2e6: Pulling fs layer
+0bd1003c3abc: Pulling fs layer
+6f9afe060529: Pulling fs layer
+bf95cc2a7260: Pulling fs layer
+0bd1003c3abc: Waiting
+6f9afe060529: Waiting
+bf95cc2a7260: Waiting
+d9d511d19a19: Verifying Checksum
+d9d511d19a19: Download complete
+6ff07f99d2e6: Verifying Checksum
+6ff07f99d2e6: Download complete
+435bf5c20694: Verifying Checksum
+435bf5c20694: Download complete
+6f9afe060529: Verifying Checksum
+6f9afe060529: Download complete
+0bd1003c3abc: Verifying Checksum
+0bd1003c3abc: Download complete
+bf95cc2a7260: Verifying Checksum
+bf95cc2a7260: Download complete
+435bf5c20694: Pull complete
+d9d511d19a19: Pull complete
+6ff07f99d2e6: Pull complete
+0bd1003c3abc: Pull complete
+6f9afe060529: Pull complete
+bf95cc2a7260: Pull complete
+Digest: sha256:e04fa72be13b257a59fdec6dc14af78c8f80f035d3c1ed4e03e45552a231d4c8
+Status: Downloaded newer image for eclipse-temurin:17-jre
+Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 3,650 days
+	for: CN=localhost
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore kafka.keystore.jks -destkeystore kafka.keystore.jks -deststoretype pkcs12".
+Certificate stored in file <kafka.server.cert.pem>
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore kafka.keystore.jks -destkeystore kafka.keystore.jks -deststoretype pkcs12".
+Certificate was added to keystore
+Importing keystore kafka.keystore.jks to kafka.server.keystore.p12...
+Warning:  Different store and key passwords not supported for PKCS12 KeyStores. Ignoring user-specified -destkeypass value.
+[simulpix] kafka TLS secrets generated in /home/runner/work/isima-tp04-ksqldb/isima-tp04-ksqldb/infra/kafka/secrets
+#1 [internal] load local bake definitions
+#1 reading from stdin 3.75kB done
+#1 DONE 0.0s
+
+#2 [pix-decision-engine internal] load build definition from Dockerfile
+#2 transferring dockerfile: 378B done
+#2 DONE 0.0s
+
+#3 [pix-traffic-shaper internal] load build definition from Dockerfile
+#3 transferring dockerfile: 260B done
+#3 DONE 0.0s
+
+#4 [pix-validator internal] load build definition from Dockerfile
+#4 transferring dockerfile: 378B done
+#4 DONE 0.0s
+
+#5 [pix-outcome-publisher internal] load build definition from Dockerfile
+#5 transferring dockerfile: 378B done
+#5 DONE 0.0s
+
+#6 [service-health internal] load build definition from Dockerfile
+#6 transferring dockerfile: 395B done
+#6 DONE 0.0s
+
+#7 [generator internal] load build definition from Dockerfile
+#7 transferring dockerfile: 378B done
+#7 DONE 0.0s
+
+#8 [pix-scenario-planner internal] load build definition from Dockerfile
+#8 transferring dockerfile: 260B done
+#8 DONE 0.1s
+
+#9 [generator internal] load metadata for docker.io/library/python:3.12-slim@sha256:7026274c107626d7e940e0e5d6730481a4600ae95d5ca7eb532dd4180313fea9
+#9 ...
+
+#10 [persister-rejected internal] load build definition from Dockerfile
+#10 transferring dockerfile: 384B done
+#10 DONE 0.1s
+
+#11 [persister-valid internal] load build definition from Dockerfile
+#11 transferring dockerfile: 384B done
+#11 DONE 0.1s
+
+#9 [persister-valid internal] load metadata for docker.io/library/python:3.12-slim@sha256:7026274c107626d7e940e0e5d6730481a4600ae95d5ca7eb532dd4180313fea9
+#9 ...
+
+#12 [auth] library/python:pull token for registry-1.docker.io
+#12 DONE 0.0s
+
+#9 [persister-valid internal] load metadata for docker.io/library/python:3.12-slim@sha256:7026274c107626d7e940e0e5d6730481a4600ae95d5ca7eb532dd4180313fea9
+#9 DONE 0.6s
+
+#13 [persister-valid internal] load .dockerignore
+#13 transferring context: 2B done
+#13 DONE 0.0s
+
+#14 [service-health internal] load .dockerignore
+#14 transferring context: 2B done
+#14 DONE 0.0s
+
+#15 [pix-outcome-publisher internal] load .dockerignore
+#15 transferring context: 2B done
+#15 DONE 0.0s
+
+#16 [pix-traffic-shaper internal] load .dockerignore
+#16 transferring context: 2B done
+#16 DONE 0.0s
+
+#17 [pix-decision-engine internal] load .dockerignore
+#17 transferring context: 2B done
+#17 DONE 0.0s
+
+#18 [pix-scenario-planner internal] load .dockerignore
+#18 transferring context: 2B done
+#18 DONE 0.0s
+
+#19 [generator internal] load .dockerignore
+#19 transferring context: 2B done
+#19 DONE 0.0s
+
+#20 [pix-validator internal] load .dockerignore
+#20 transferring context: 2B done
+#20 DONE 0.1s
+
+#21 [persister-rejected internal] load .dockerignore
+#21 transferring context: 2B done
+#21 DONE 0.1s
+
+#22 [persister-valid internal] load build context
+#22 transferring context: 19.07kB done
+#22 DONE 0.1s
+
+#23 [service-health internal] load build context
+#23 transferring context: 172.63kB done
+#23 DONE 0.1s
+
+#24 [pix-outcome-publisher internal] load build context
+#24 transferring context: 20.23kB done
+#24 DONE 0.0s
+
+#25 [pix-traffic-shaper internal] load build context
+#25 transferring context: 21.35kB done
+#25 DONE 0.0s
+
+#26 [pix-decision-engine internal] load build context
+#26 transferring context: 34.79kB done
+#26 DONE 0.0s
+
+#27 [generator internal] load build context
+#27 transferring context: 36.71kB done
+#27 DONE 0.0s
+
+#28 [pix-scenario-planner internal] load build context
+#28 transferring context: 8.17kB done
+#28 DONE 0.0s
+
+#29 [persister-rejected internal] load build context
+#29 transferring context: 18.38kB done
+#29 DONE 0.0s
+
+#30 [pix-validator internal] load build context
+#30 transferring context: 22.57kB done
+#30 DONE 0.0s
+
+#31 [persister-rejected 1/6] FROM docker.io/library/python:3.12-slim@sha256:7026274c107626d7e940e0e5d6730481a4600ae95d5ca7eb532dd4180313fea9
+#31 resolve docker.io/library/python:3.12-slim@sha256:7026274c107626d7e940e0e5d6730481a4600ae95d5ca7eb532dd4180313fea9 0.0s done
+#31 sha256:b1a20e2fae4cdafe596f3275baf250182347549a39d648abbad68a25f2e151fd 0B / 1.29MB 0.1s
+#31 sha256:a6d1911b36ac5b384a54e9197335acdf0ebb0a06910b25b67b9afd054cdc2eb7 0B / 12.11MB 0.1s
+#31 sha256:e3c59d77c03efd793b736fb93c9b3c578eb84a62458c148b6974323225d030c2 0B / 249B 0.1s
+#31 sha256:a6d1911b36ac5b384a54e9197335acdf0ebb0a06910b25b67b9afd054cdc2eb7 6.29MB / 12.11MB 0.2s
+#31 sha256:e3c59d77c03efd793b736fb93c9b3c578eb84a62458c148b6974323225d030c2 249B / 249B 0.1s done
+#31 sha256:7026274c107626d7e940e0e5d6730481a4600ae95d5ca7eb532dd4180313fea9 10.37kB / 10.37kB done
+#31 sha256:0bbd3d5f3abb2024c1b92ce69e8bdfefa17c248999827c34e2ed52ba0772da1b 1.75kB / 1.75kB done
+#31 sha256:fb1118f126b507965df3c46fdfc52312dfd5262e7b6652ef510bd9298f69a6bc 5.66kB / 5.66kB done
+#31 extracting sha256:b1a20e2fae4cdafe596f3275baf250182347549a39d648abbad68a25f2e151fd
+#31 sha256:b1a20e2fae4cdafe596f3275baf250182347549a39d648abbad68a25f2e151fd 1.29MB / 1.29MB 0.2s done
+#31 sha256:a6d1911b36ac5b384a54e9197335acdf0ebb0a06910b25b67b9afd054cdc2eb7 12.11MB / 12.11MB 0.3s
+#31 sha256:a6d1911b36ac5b384a54e9197335acdf0ebb0a06910b25b67b9afd054cdc2eb7 12.11MB / 12.11MB 0.3s done
+#31 extracting sha256:b1a20e2fae4cdafe596f3275baf250182347549a39d648abbad68a25f2e151fd 0.1s done
+#31 extracting sha256:a6d1911b36ac5b384a54e9197335acdf0ebb0a06910b25b67b9afd054cdc2eb7
+#31 extracting sha256:a6d1911b36ac5b384a54e9197335acdf0ebb0a06910b25b67b9afd054cdc2eb7 0.4s done
+#31 extracting sha256:e3c59d77c03efd793b736fb93c9b3c578eb84a62458c148b6974323225d030c2
+#31 extracting sha256:e3c59d77c03efd793b736fb93c9b3c578eb84a62458c148b6974323225d030c2 done
+#31 DONE 1.4s
+
+#32 [pix-traffic-shaper 2/6] WORKDIR /app
+#32 DONE 0.1s
+
+#33 [persister-valid 3/6] RUN apt-get update     && apt-get install -y --no-install-recommends iproute2     && rm -rf /var/lib/apt/lists/*
+#33 ...
+
+#34 [pix-scenario-planner 3/5] COPY requirements.txt .
+#34 DONE 0.0s
+
+#33 [persister-valid 3/6] RUN apt-get update     && apt-get install -y --no-install-recommends iproute2     && rm -rf /var/lib/apt/lists/*
+#33 0.350 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+#33 0.385 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#33 0.404 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#33 0.425 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+#33 1.486 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [720 B]
+#33 1.487 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [270 kB]
+#33 2.265 Fetched 10.2 MB in 2s (4903 kB/s)
+#33 2.265 Reading package lists...
+#33 ...
+
+#35 [pix-traffic-shaper 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#35 1.970 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#35 2.062 
+#35 2.062 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#35 2.062 [notice] To update, run: pip install --upgrade pip
+#35 DONE 2.5s
+
+#36 [pix-scenario-planner 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#36 CACHED
+
+#37 [pix-scenario-planner 3/5] COPY requirements.txt .
+#37 CACHED
+
+#38 [pix-traffic-shaper 5/5] COPY . .
+#38 DONE 0.0s
+
+#39 [pix-scenario-planner 5/5] COPY . .
+#39 DONE 0.0s
+
+#40 [pix-scenario-planner] exporting to image
+#40 exporting layers
+#40 exporting layers 0.6s done
+#40 writing image sha256:9afb38ef663a0443fa5978d8270c128f91988dd0d460faca71ec4b82b7d567dc 0.0s done
+#40 naming to docker.io/library/simulpix-pix-scenario-planner done
+#40 DONE 0.6s
+
+#41 [pix-traffic-shaper] exporting to image
+#41 exporting layers 0.6s done
+#41 writing image sha256:00e114875bccd7e64783aafc34c4afd28b9359667fc4e887aa627dc196189009 done
+#41 naming to docker.io/library/simulpix-pix-traffic-shaper done
+#41 DONE 0.6s
+
+#42 [pix-scenario-planner] resolving provenance for metadata file
+#42 DONE 0.0s
+
+#43 [pix-traffic-shaper] resolving provenance for metadata file
+#43 DONE 0.0s
+
+#44 [service-health 3/6] RUN apt-get update     && apt-get install -y --no-install-recommends docker-cli docker-compose     && rm -rf /var/lib/apt/lists/*
+#44 0.406 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+#44 0.437 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#44 0.452 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#44 0.468 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+#44 0.642 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [720 B]
+#44 0.643 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [270 kB]
+#44 1.360 Fetched 10.2 MB in 1s (10.2 MB/s)
+#44 1.360 Reading package lists...
+#44 1.974 Reading package lists...
+#44 2.399 Building dependency tree...
+#44 2.533 Reading state information...
+#44 2.746 Suggested packages:
+#44 2.746   docker-doc
+#44 2.746 Recommended packages:
+#44 2.746   docker-buildx
+#44 2.802 The following NEW packages will be installed:
+#44 2.802   docker-cli docker-compose
+#44 2.860 0 upgraded, 2 newly installed, 0 to remove and 29 not upgraded.
+#44 2.860 Need to get 20.3 MB of archives.
+#44 2.860 After this operation, 95.5 MB of additional disk space will be used.
+#44 2.860 Get:1 http://deb.debian.org/debian trixie/main amd64 docker-cli amd64 26.1.5+dfsg1-9+deb13u1 [7337 kB]
+#44 3.026 Get:2 http://deb.debian.org/debian trixie/main amd64 docker-compose amd64 2.26.1-4 [13.0 MB]
+#44 3.295 debconf: unable to initialize frontend: Dialog
+#44 3.295 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#44 3.295 debconf: falling back to frontend: Readline
+#44 3.296 debconf: unable to initialize frontend: Readline
+#44 3.296 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 2.)
+#44 3.296 debconf: falling back to frontend: Teletype
+#44 3.300 debconf: unable to initialize frontend: Teletype
+#44 3.300 debconf: (This frontend requires a controlling tty.)
+#44 3.300 debconf: falling back to frontend: Noninteractive
+#44 3.803 Fetched 20.3 MB in 0s (65.4 MB/s)
+#44 3.812 Selecting previously unselected package docker-cli.
+#44 3.812 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5645 files and directories currently installed.)
+#44 3.818 Preparing to unpack .../docker-cli_26.1.5+dfsg1-9+deb13u1_amd64.deb ...
+#44 3.818 Unpacking docker-cli (26.1.5+dfsg1-9+deb13u1) ...
+#44 4.048 Selecting previously unselected package docker-compose.
+#44 4.049 Preparing to unpack .../docker-compose_2.26.1-4_amd64.deb ...
+#44 4.050 Unpacking docker-compose (2.26.1-4) ...
+#44 4.397 Setting up docker-compose (2.26.1-4) ...
+#44 4.399 Setting up docker-cli (26.1.5+dfsg1-9+deb13u1) ...
+#44 DONE 4.9s
+
+#33 [persister-valid 3/6] RUN apt-get update     && apt-get install -y --no-install-recommends iproute2     && rm -rf /var/lib/apt/lists/*
+#33 2.265 Reading package lists...
+#33 2.873 Reading package lists...
+#33 3.384 Building dependency tree...
+#33 3.511 Reading state information...
+#33 3.621 The following additional packages will be installed:
+#33 3.621   libbpf1 libcap2 libcap2-bin libcom-err2 libelf1t64 libgssapi-krb5-2
+#33 3.622   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libmnl0 libtirpc-common
+#33 3.622   libtirpc3t64 libxtables12
+#33 3.623 Suggested packages:
+#33 3.623   python3:any krb5-doc krb5-user
+#33 3.623 Recommended packages:
+#33 3.623   libpam-cap krb5-locales
+#33 3.690 The following NEW packages will be installed:
+#33 3.691   iproute2 libbpf1 libcap2-bin libcom-err2 libelf1t64 libgssapi-krb5-2
+#33 3.691   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libmnl0 libtirpc-common
+#33 3.691   libtirpc3t64 libxtables12
+#33 3.692 The following packages will be upgraded:
+#33 3.692   libcap2
+#33 3.739 1 upgraded, 14 newly installed, 0 to remove and 28 not upgraded.
+#33 3.739 Need to get 2264 kB of archives.
+#33 3.739 After this operation, 8208 kB of additional disk space will be used.
+#33 3.739 Get:1 http://deb.debian.org/debian trixie/main amd64 libcap2 amd64 1:2.75-10+deb13u1+b3 [29.0 kB]
+#33 3.792 Get:2 http://deb.debian.org/debian trixie/main amd64 libelf1t64 amd64 0.192-4 [189 kB]
+#33 3.819 Get:3 http://deb.debian.org/debian trixie/main amd64 libbpf1 amd64 1:1.5.0-3 [169 kB]
+#33 3.833 Get:4 http://deb.debian.org/debian trixie/main amd64 libmnl0 amd64 1.0.5-3 [11.9 kB]
+#33 3.834 Get:5 http://deb.debian.org/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5+deb13u1 [33.1 kB]
+#33 3.835 Get:6 http://deb.debian.org/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b12 [25.0 kB]
+#33 3.836 Get:7 http://deb.debian.org/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5+deb13u1 [81.2 kB]
+#33 3.846 Get:8 http://deb.debian.org/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6 [9456 B]
+#33 3.847 Get:9 http://deb.debian.org/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5+deb13u1 [326 kB]
+#33 3.860 Get:10 http://deb.debian.org/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5+deb13u1 [138 kB]
+#33 3.862 Get:11 http://deb.debian.org/debian trixie/main amd64 libtirpc-common all 1.3.6+ds-1 [11.0 kB]
+#33 3.863 Get:12 http://deb.debian.org/debian trixie/main amd64 libtirpc3t64 amd64 1.3.6+ds-1 [83.3 kB]
+#33 3.864 Get:13 http://deb.debian.org/debian trixie/main amd64 libxtables12 amd64 1.8.11-2 [31.9 kB]
+#33 3.874 Get:14 http://deb.debian.org/debian trixie/main amd64 libcap2-bin amd64 1:2.75-10+deb13u1+b3 [36.5 kB]
+#33 3.874 Get:15 http://deb.debian.org/debian trixie/main amd64 iproute2 amd64 6.15.0-1 [1089 kB]
+#33 4.011 debconf: unable to initialize frontend: Dialog
+#33 4.011 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#33 4.011 debconf: falling back to frontend: Readline
+#33 4.012 debconf: unable to initialize frontend: Readline
+#33 4.012 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 15.)
+#33 4.012 debconf: falling back to frontend: Teletype
+#33 4.016 debconf: unable to initialize frontend: Teletype
+#33 4.016 debconf: (This frontend requires a controlling tty.)
+#33 4.016 debconf: falling back to frontend: Noninteractive
+#33 4.520 Preconfiguring packages ...
+#33 ...
+
+#45 [service-health 4/6] COPY requirements.txt .
+#45 DONE 0.0s
+
+#33 [persister-valid 3/6] RUN apt-get update     && apt-get install -y --no-install-recommends iproute2     && rm -rf /var/lib/apt/lists/*
+#33 4.912 Fetched 2264 kB in 0s (11.8 MB/s)
+#33 4.944 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5645 files and directories currently installed.)
+#33 4.954 Preparing to unpack .../libcap2_1%3a2.75-10+deb13u1+b3_amd64.deb ...
+#33 4.996 Unpacking libcap2:amd64 (1:2.75-10+deb13u1+b3) over (1:2.75-10+b8) ...
+#33 5.014 Setting up libcap2:amd64 (1:2.75-10+deb13u1+b3) ...
+#33 5.033 Selecting previously unselected package libelf1t64:amd64.
+#33 5.033 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5645 files and directories currently installed.)
+#33 5.038 Preparing to unpack .../00-libelf1t64_0.192-4_amd64.deb ...
+#33 5.039 Unpacking libelf1t64:amd64 (0.192-4) ...
+#33 5.060 Selecting previously unselected package libbpf1:amd64.
+#33 5.061 Preparing to unpack .../01-libbpf1_1%3a1.5.0-3_amd64.deb ...
+#33 5.062 Unpacking libbpf1:amd64 (1:1.5.0-3) ...
+#33 5.111 Selecting previously unselected package libmnl0:amd64.
+#33 5.112 Preparing to unpack .../02-libmnl0_1.0.5-3_amd64.deb ...
+#33 5.113 Unpacking libmnl0:amd64 (1.0.5-3) ...
+#33 5.124 Selecting previously unselected package libkrb5support0:amd64.
+#33 5.125 Preparing to unpack .../03-libkrb5support0_1.21.3-5+deb13u1_amd64.deb ...
+#33 5.126 Unpacking libkrb5support0:amd64 (1.21.3-5+deb13u1) ...
+#33 5.139 Selecting previously unselected package libcom-err2:amd64.
+#33 5.140 Preparing to unpack .../04-libcom-err2_1.47.2-3+b12_amd64.deb ...
+#33 5.140 Unpacking libcom-err2:amd64 (1.47.2-3+b12) ...
+#33 5.153 Selecting previously unselected package libk5crypto3:amd64.
+#33 5.154 Preparing to unpack .../05-libk5crypto3_1.21.3-5+deb13u1_amd64.deb ...
+#33 5.155 Unpacking libk5crypto3:amd64 (1.21.3-5+deb13u1) ...
+#33 5.217 Selecting previously unselected package libkeyutils1:amd64.
+#33 5.219 Preparing to unpack .../06-libkeyutils1_1.6.3-6_amd64.deb ...
+#33 5.239 Unpacking libkeyutils1:amd64 (1.6.3-6) ...
+#33 5.263 Selecting previously unselected package libkrb5-3:amd64.
+#33 5.265 Preparing to unpack .../07-libkrb5-3_1.21.3-5+deb13u1_amd64.deb ...
+#33 5.266 Unpacking libkrb5-3:amd64 (1.21.3-5+deb13u1) ...
+#33 5.294 Selecting previously unselected package libgssapi-krb5-2:amd64.
+#33 5.295 Preparing to unpack .../08-libgssapi-krb5-2_1.21.3-5+deb13u1_amd64.deb ...
+#33 5.296 Unpacking libgssapi-krb5-2:amd64 (1.21.3-5+deb13u1) ...
+#33 5.318 Selecting previously unselected package libtirpc-common.
+#33 5.319 Preparing to unpack .../09-libtirpc-common_1.3.6+ds-1_all.deb ...
+#33 5.320 Unpacking libtirpc-common (1.3.6+ds-1) ...
+#33 5.345 Selecting previously unselected package libtirpc3t64:amd64.
+#33 5.347 Preparing to unpack .../10-libtirpc3t64_1.3.6+ds-1_amd64.deb ...
+#33 5.350 Adding 'diversion of /lib/x86_64-linux-gnu/libtirpc.so.3 to /lib/x86_64-linux-gnu/libtirpc.so.3.usr-is-merged by libtirpc3t64'
+#33 5.354 Adding 'diversion of /lib/x86_64-linux-gnu/libtirpc.so.3.0.0 to /lib/x86_64-linux-gnu/libtirpc.so.3.0.0.usr-is-merged by libtirpc3t64'
+#33 5.355 Unpacking libtirpc3t64:amd64 (1.3.6+ds-1) ...
+#33 5.373 Selecting previously unselected package libxtables12:amd64.
+#33 5.374 Preparing to unpack .../11-libxtables12_1.8.11-2_amd64.deb ...
+#33 5.375 Unpacking libxtables12:amd64 (1.8.11-2) ...
+#33 5.387 Selecting previously unselected package libcap2-bin.
+#33 5.388 Preparing to unpack .../12-libcap2-bin_1%3a2.75-10+deb13u1+b3_amd64.deb ...
+#33 5.389 Unpacking libcap2-bin (1:2.75-10+deb13u1+b3) ...
+#33 5.407 Selecting previously unselected package iproute2.
+#33 5.407 Preparing to unpack .../13-iproute2_6.15.0-1_amd64.deb ...
+#33 5.442 Unpacking iproute2 (6.15.0-1) ...
+#33 5.514 Setting up libkeyutils1:amd64 (1.6.3-6) ...
+#33 5.515 Setting up libtirpc-common (1.3.6+ds-1) ...
+#33 5.518 Setting up libcom-err2:amd64 (1.47.2-3+b12) ...
+#33 5.520 Setting up libelf1t64:amd64 (0.192-4) ...
+#33 5.522 Setting up libkrb5support0:amd64 (1.21.3-5+deb13u1) ...
+#33 5.524 Setting up libcap2-bin (1:2.75-10+deb13u1+b3) ...
+#33 5.525 Setting up libmnl0:amd64 (1.0.5-3) ...
+#33 5.527 Setting up libk5crypto3:amd64 (1.21.3-5+deb13u1) ...
+#33 5.529 Setting up libxtables12:amd64 (1.8.11-2) ...
+#33 5.531 Setting up libkrb5-3:amd64 (1.21.3-5+deb13u1) ...
+#33 5.533 Setting up libbpf1:amd64 (1:1.5.0-3) ...
+#33 5.534 Setting up libgssapi-krb5-2:amd64 (1.21.3-5+deb13u1) ...
+#33 5.537 Setting up libtirpc3t64:amd64 (1.3.6+ds-1) ...
+#33 5.539 Setting up iproute2 (6.15.0-1) ...
+#33 5.588 debconf: unable to initialize frontend: Dialog
+#33 5.588 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#33 5.588 debconf: falling back to frontend: Readline
+#33 5.588 debconf: unable to initialize frontend: Readline
+#33 5.588 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+#33 5.588 debconf: falling back to frontend: Teletype
+#33 5.592 debconf: unable to initialize frontend: Teletype
+#33 5.592 debconf: (This frontend requires a controlling tty.)
+#33 5.592 debconf: falling back to frontend: Noninteractive
+#33 5.651 Processing triggers for libc-bin (2.41-12+deb13u2) ...
+#33 DONE 5.9s
+
+#46 [pix-validator 4/6] COPY requirements.txt .
+#46 DONE 0.0s
+
+#47 [persister-rejected 4/6] COPY requirements.txt .
+#47 DONE 0.0s
+
+#48 [pix-outcome-publisher 5/6] RUN pip install --no-cache-dir -r requirements.txt
+#48 2.368 Collecting confluent-kafka==2.8.2 (from -r requirements.txt (line 1))
+#48 2.414   Downloading confluent_kafka-2.8.2-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (22 kB)
+#48 2.463 Downloading confluent_kafka-2.8.2-cp312-cp312-manylinux_2_28_x86_64.whl (3.8 MB)
+#48 2.551    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 58.0 MB/s eta 0:00:00
+#48 2.572 Installing collected packages: confluent-kafka
+#48 ...
+
+#49 [service-health 5/6] RUN pip install --no-cache-dir -r requirements.txt
+#49 1.894 Collecting confluent-kafka==2.8.2 (from -r requirements.txt (line 1))
+#49 1.952   Downloading confluent_kafka-2.8.2-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (22 kB)
+#49 2.004 Collecting psycopg==3.2.6 (from psycopg[binary]==3.2.6->-r requirements.txt (line 2))
+#49 2.070   Downloading psycopg-3.2.6-py3-none-any.whl.metadata (4.4 kB)
+#49 2.106 Collecting typing-extensions>=4.6 (from psycopg==3.2.6->psycopg[binary]==3.2.6->-r requirements.txt (line 2))
+#49 2.122   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#49 2.309 Collecting psycopg-binary==3.2.6 (from psycopg[binary]==3.2.6->-r requirements.txt (line 2))
+#49 2.325   Downloading psycopg_binary-3.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#49 2.344 Downloading confluent_kafka-2.8.2-cp312-cp312-manylinux_2_28_x86_64.whl (3.8 MB)
+#49 2.478    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 39.8 MB/s eta 0:00:00
+#49 2.493 Downloading psycopg-3.2.6-py3-none-any.whl (199 kB)
+#49 2.607 Downloading psycopg_binary-3.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+#49 2.638    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 147.7 MB/s eta 0:00:00
+#49 2.654 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#49 2.675 Installing collected packages: typing-extensions, psycopg-binary, confluent-kafka, psycopg
+#49 3.145 Successfully installed confluent-kafka-2.8.2 psycopg-3.2.6 psycopg-binary-3.2.6 typing-extensions-4.16.0
+#49 3.145 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#49 3.239 
+#49 3.239 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#49 3.239 [notice] To update, run: pip install --upgrade pip
+#49 DONE 3.8s
+
+#48 [pix-outcome-publisher 5/6] RUN pip install --no-cache-dir -r requirements.txt
+#48 2.711 Successfully installed confluent-kafka-2.8.2
+#48 2.711 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#48 2.804 
+#48 2.804 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#48 2.804 [notice] To update, run: pip install --upgrade pip
+#48 DONE 3.0s
+
+#50 [generator 4/6] COPY requirements.txt .
+#50 CACHED
+
+#51 [generator 5/6] RUN pip install --no-cache-dir -r requirements.txt
+#51 CACHED
+
+#52 [pix-decision-engine 5/6] RUN pip install --no-cache-dir -r requirements.txt
+#52 CACHED
+
+#53 [pix-decision-engine 4/6] COPY requirements.txt .
+#53 CACHED
+
+#54 [pix-validator 5/6] RUN pip install --no-cache-dir -r requirements.txt
+#54 CACHED
+
+#55 [pix-validator 4/6] COPY requirements.txt .
+#55 CACHED
+
+#56 [service-health 6/6] COPY . .
+#56 DONE 0.2s
+
+#57 [service-health] exporting to image
+#57 exporting layers
+#57 ...
+
+#58 [pix-decision-engine 6/6] COPY . .
+#58 DONE 0.3s
+
+#59 [generator 6/6] COPY . .
+#59 DONE 0.3s
+
+#60 [pix-outcome-publisher 6/6] COPY . .
+#60 DONE 0.3s
+
+#61 [pix-validator 6/6] COPY . .
+#61 DONE 0.4s
+
+#62 [generator] exporting to image
+#62 ...
+
+#63 [persister-valid 5/6] RUN pip install --no-cache-dir -r requirements.txt
+#63 2.241 Collecting confluent-kafka==2.8.2 (from -r requirements.txt (line 1))
+#63 2.302   Downloading confluent_kafka-2.8.2-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (22 kB)
+#63 2.382 Collecting psycopg==3.2.6 (from psycopg[binary]==3.2.6->-r requirements.txt (line 2))
+#63 2.400   Downloading psycopg-3.2.6-py3-none-any.whl.metadata (4.4 kB)
+#63 2.429 Collecting typing-extensions>=4.6 (from psycopg==3.2.6->psycopg[binary]==3.2.6->-r requirements.txt (line 2))
+#63 2.445   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#63 2.611 Collecting psycopg-binary==3.2.6 (from psycopg[binary]==3.2.6->-r requirements.txt (line 2))
+#63 2.629   Downloading psycopg_binary-3.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#63 2.648 Downloading confluent_kafka-2.8.2-cp312-cp312-manylinux_2_28_x86_64.whl (3.8 MB)
+#63 2.776    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 39.5 MB/s eta 0:00:00
+#63 2.792 Downloading psycopg-3.2.6-py3-none-any.whl (199 kB)
+#63 2.823 Downloading psycopg_binary-3.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+#63 2.909    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 48.4 MB/s eta 0:00:00
+#63 2.925 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#63 2.946 Installing collected packages: typing-extensions, psycopg-binary, confluent-kafka, psycopg
+#63 3.491 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#63 3.491 Successfully installed confluent-kafka-2.8.2 psycopg-3.2.6 psycopg-binary-3.2.6 typing-extensions-4.16.0
+#63 3.607 
+#63 3.607 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#63 3.607 [notice] To update, run: pip install --upgrade pip
+#63 DONE 3.9s
+
+#64 [persister-rejected 5/6] RUN pip install --no-cache-dir -r requirements.txt
+#64 CACHED
+
+#65 [persister-rejected 4/6] COPY requirements.txt .
+#65 CACHED
+
+#66 [persister-valid 6/6] COPY main.py .
+#66 DONE 0.1s
+
+#67 [persister-rejected 6/6] COPY main.py .
+#67 DONE 0.1s
+
+#57 [service-health] exporting to image
+#57 exporting layers 1.0s done
+#57 writing image sha256:36623ce79b14155b7540a0ec45a558e3a0842006d8f5d0f06adef26d3c2abc82 done
+#57 naming to docker.io/library/simulpix-service-health done
+#57 DONE 1.0s
+
+#68 [service-health] resolving provenance for metadata file
+#68 DONE 0.0s
+
+#62 [generator] exporting to image
+#62 exporting layers 0.9s done
+#62 writing image sha256:409e5cb252a3f70d3af45ec19fd0a5f8caf4818a6a61a477616983b3e609077c 0.0s done
+#62 naming to docker.io/library/simulpix-generator done
+#62 DONE 1.0s
+
+#69 [pix-outcome-publisher] exporting to image
+#69 exporting layers 0.8s done
+#69 writing image sha256:3d2444ab8fcec19c3dd235488e09b13facc0970eade17f115101cd951ea9b677 0.0s done
+#69 naming to docker.io/library/simulpix-pix-outcome-publisher 0.0s done
+#69 DONE 1.0s
+
+#70 [pix-validator] exporting to image
+#70 exporting layers 0.8s done
+#70 writing image sha256:3eff325e776e1623bab2307c56e05fadfac0c2a9cfa3501b499daf4aec5b8ee1 done
+#70 naming to docker.io/library/simulpix-pix-validator 0.0s done
+#70 DONE 1.0s
+
+#71 [pix-decision-engine] exporting to image
+#71 exporting layers 0.8s done
+#71 writing image sha256:7151606aae3701ca8fd66e9d08ab798d854bd86d33e6cef016ec792f777a9611 done
+#71 naming to docker.io/library/simulpix-pix-decision-engine 0.0s done
+#71 DONE 1.0s
+
+#72 [persister-rejected] exporting to image
+#72 exporting layers 0.8s done
+#72 writing image sha256:45820fbb073fb6244eed1baca98b5603e161e17541ceabbd6cdbe73f28078599 done
+#72 naming to docker.io/library/simulpix-persister-rejected done
+#72 DONE 0.8s
+
+#73 [generator] resolving provenance for metadata file
+#73 DONE 0.2s
+
+#74 [pix-outcome-publisher] resolving provenance for metadata file
+#74 DONE 0.0s
+
+#75 [pix-validator] resolving provenance for metadata file
+#75 DONE 0.0s
+
+#76 [pix-decision-engine] resolving provenance for metadata file
+#76 DONE 0.0s
+
+#77 [persister-valid] exporting to image
+#77 exporting layers 0.8s done
+#77 writing image sha256:9d74ef5f66f81efc38f8e3ce56ddd581033c39d794019f69a38baf894ed22c4d done
+#77 naming to docker.io/library/simulpix-persister-valid done
+#77 DONE 0.8s
+
+#78 [persister-rejected] resolving provenance for metadata file
+#78 DONE 0.0s
+
+#79 [persister-valid] resolving provenance for metadata file
+#79 DONE 0.0s
+ pix-outcome-publisher  Built
+ generator  Built
+ pix-validator  Built
+ pix-traffic-shaper  Built
+ persister-rejected  Built
+ pix-scenario-planner  Built
+ service-health  Built
+ pix-decision-engine  Built
+ persister-valid  Built
+ Network simulpix_default  Creating
+ Network simulpix_default  Created
+ Volume "simulpix_kafka_2_data"  Creating
+ Volume "simulpix_kafka_2_data"  Created
+ Volume "simulpix_grafana_data"  Creating
+ Volume "simulpix_grafana_data"  Created
+ Volume "simulpix_influxdb_data"  Creating
+ Volume "simulpix_influxdb_data"  Created
+ Volume "simulpix_kafka_3_data"  Creating
+ Volume "simulpix_kafka_3_data"  Created
+ Volume "simulpix_postgres_data"  Creating
+ Volume "simulpix_postgres_data"  Created
+ Volume "simulpix_kafka_1_data"  Creating
+ Volume "simulpix_kafka_1_data"  Created
+ Container kafka-2  Creating
+ Container influxdb  Creating
+ Container postgres  Creating
+ Container kafka-1  Creating
+ Container kafka-3  Creating
+ Container pix-scenario-planner  Creating
+ Container pix-scenario-planner  Created
+ Container postgres  Created
+ Container influxdb  Created
+ Container grafana  Creating
+ Container kafka-3  Created
+ Container kafka-2  Created
+ Container kafka-1  Created
+ Container pix-outcome-publisher  Creating
+ Container persister-valid  Creating
+ Container pix-validator  Creating
+ Container topic-init  Creating
+ Container persister-rejected  Creating
+ Container pix-decision-engine  Creating
+ Container generator  Creating
+ Container grafana  Created
+ Container pix-decision-engine  Created
+ Container persister-valid  Created
+ Container pix-validator  Created
+ Container generator  Created
+ Container pix-traffic-shaper  Creating
+ Container pix-outcome-publisher  Created
+ Container persister-rejected  Created
+ Container topic-init  Created
+ Container pix-traffic-shaper  Created
+ Container service-health  Creating
+ Container service-health  Created
+ Container metrics-collector  Creating
+ Container metrics-collector  Created
+ Container influxdb  Starting
+ Container kafka-1  Starting
+ Container pix-scenario-planner  Starting
+ Container postgres  Starting
+ Container kafka-2  Starting
+ Container kafka-3  Starting
+ Container pix-scenario-planner  Started
+ Container influxdb  Started
+ Container grafana  Starting
+ Container postgres  Started
+ Container kafka-3  Started
+ Container kafka-2  Started
+ Container kafka-1  Started
+ Container generator  Starting
+ Container pix-validator  Starting
+ Container persister-valid  Starting
+ Container pix-outcome-publisher  Starting
+ Container pix-decision-engine  Starting
+ Container topic-init  Starting
+ Container persister-rejected  Starting
+ Container pix-decision-engine  Started
+ Container pix-outcome-publisher  Started
+ Container persister-valid  Started
+ Container generator  Started
+ Container pix-traffic-shaper  Starting
+ Container pix-validator  Started
+ Container grafana  Started
+ Container persister-rejected  Started
+ Container topic-init  Started
+ Container pix-traffic-shaper  Started
+ Container service-health  Starting
+ Container service-health  Started
+ Container metrics-collector  Starting
+ Container metrics-collector  Started
+[simulpix] platform started
+[simulpix] kafka sasl/plaintext brokers: localhost:9092, localhost:9093, localhost:9094
+[simulpix] postgres: localhost:5432
+[simulpix] service health: http://localhost:8082/health
+[simulpix] influxdb: http://localhost:8086
+[simulpix] grafana: http://localhost:3000 (admin / adminpass)
+[32m[simulpix] atelier kafka: http://localhost:8083/[0m

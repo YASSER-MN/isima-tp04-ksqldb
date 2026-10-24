@@ -1,0 +1,40 @@
+
+===== Requêtes pull sur pix_par_emetteur, une par émetteur =====
+{
+  "total": 600,
+  "per_key": {
+    "TAX-0001": [
+      "TAX-0001",
+      100,
+      10000.0
+    ],
+    "TAX-0002": [
+      "TAX-0002",
+      100,
+      10375.0
+    ],
+    "TAX-0003": [
+      "TAX-0003",
+      100,
+      10000.0
+    ],
+    "TAX-0004": [
+      "TAX-0004",
+      100,
+      10375.0
+    ],
+    "TAX-0005": [
+      "TAX-0005",
+      100,
+      10000.0
+    ],
+    "TAX-0006": [
+      "TAX-0006",
+      100,
+      10375.0
+    ]
+  }
+}
+
+===== Mises à jour publiées dans le topic de sortie simulpix.ksql.pix_par_emetteur =====
+6

@@ -1,0 +1,23 @@
+
+===== 5 premières lignes de pix_valides_enrichis =====
+{"columns": ["EMITTER_TAX_ID", "TRANSACTION_ID", "EMETTEUR", "AMOUNT"], "row_count": 600, "error": null}
+["TAX-0004", "tx-00000003", "Client 0004", 21.25]
+["TAX-0005", "tx-00000004", "Client 0005", 25.0]
+["TAX-0004", "tx-00000009", "Client 0004", 43.75]
+["TAX-0005", "tx-00000010", "Client 0005", 47.5]
+["TAX-0004", "tx-00000015", "Client 0004", 66.25]
+Traceback (most recent call last):
+  File "/home/runner/work/isima-tp04-ksqldb/isima-tp04-ksqldb/tp04/tp04_ksql.py", line 213, in <module>
+    sys.exit(main(sys.argv))
+             ^^^^^^^^^^^^^^
+  File "/home/runner/work/isima-tp04-ksqldb/isima-tp04-ksqldb/tp04/tp04_ksql.py", line 188, in main
+    print(json.dumps(row, ensure_ascii=False))
+BrokenPipeError: [Errno 32] Broken pipe
+
+===== Nombre de messages dans simulpix.ksql.pix_valides_enrichis =====
+600
+
+===== Topics de repartition de la jointure =====
+_confluent-ksql-simulpix_ksql_query_CSAS_PIX_VALIDES_ENRICHIS_13-Join-repartition
+_confluent-ksql-simulpix_ksql_query_CSAS_PIX_VALIDES_ENRICHIS_13-KafkaTopic_Right-Reduce-changelog
+simulpix.ksql.pix_valides_enrichis

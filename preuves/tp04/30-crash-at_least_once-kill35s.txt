@@ -1,0 +1,15 @@
+[simulpix] TP 04 — garantie ksqlDB : at_least_once
+[simulpix] (re)création de ksqldb-server avec processing.guarantee=at_least_once
+[simulpix] flux de 1200 Pix à 20 Pix/s
+[simulpix] 35 s de traitement, puis SIGKILL sur ksqldb-server pendant 10 s
+[simulpix] avant le crash : ksqlDB=884 base=924
+[simulpix] attente de la fin du flux et du rattrapage
+[simulpix] ksqlDB restaure son état; nouvelle vérification dans 5 s
+
+==========================================================
+  BILAN TP 04 (at_least_once)
+==========================================================
+  Pix validés en base (vérité terrain) :   1200
+  Pix comptés par ksqlDB (somme COUNT)  :   1489
+  Écart ksqlDB - base                   :   +289
+==========================================================

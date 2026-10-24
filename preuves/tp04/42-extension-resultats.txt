@@ -1,0 +1,90 @@
+
+===== Garantie ksqlDB =====
+KSQL_KSQL_STREAMS_PROCESSING_GUARANTEE=exactly_once_v2
+KSQL_KSQL_STREAMS_COMMIT_INTERVAL_MS=2000
+
+===== Compteurs =====
+Messages dans raw (offsets de fin)       : 1260
+Messages dans validated (offsets de fin) : 1260
+Pix validés en base (clé primaire)       : 1200
+Pix en base, validés + rejetés           : 1200
+ksqlDB pix_par_emetteur (naïf)           : 1260
+ksqlDB pix_par_emetteur_dedup            : 1200
+
+===== Détail par émetteur (naïf) =====
+{
+  "total": 1260,
+  "per_key": {
+    "TAX-0001": [
+      "TAX-0001",
+      220,
+      21700.0
+    ],
+    "TAX-0002": [
+      "TAX-0002",
+      200,
+      20750.0
+    ],
+    "TAX-0003": [
+      "TAX-0003",
+      220,
+      21700.0
+    ],
+    "TAX-0004": [
+      "TAX-0004",
+      200,
+      20750.0
+    ],
+    "TAX-0005": [
+      "TAX-0005",
+      220,
+      21700.0
+    ],
+    "TAX-0006": [
+      "TAX-0006",
+      200,
+      20750.0
+    ]
+  }
+}
+
+===== Détail par émetteur (dédupliqué) =====
+{
+  "total": 1200,
+  "per_key": {
+    "TAX-0001": [
+      "TAX-0001",
+      200,
+      20000.0
+    ],
+    "TAX-0002": [
+      "TAX-0002",
+      200,
+      20750.0
+    ],
+    "TAX-0003": [
+      "TAX-0003",
+      200,
+      20000.0
+    ],
+    "TAX-0004": [
+      "TAX-0004",
+      200,
+      20750.0
+    ],
+    "TAX-0005": [
+      "TAX-0005",
+      200,
+      20000.0
+    ],
+    "TAX-0006": [
+      "TAX-0006",
+      200,
+      20750.0
+    ]
+  }
+}
+
+===== Exemple de doublon dans validated (même transaction_id deux fois) =====
+      2 "transaction_id": "tx-00000060"
+      2 "transaction_id": "tx-00000120"
