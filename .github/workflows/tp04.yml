@@ -1,12 +1,6 @@
 name: TP 04 ksqlDB — exécution et preuves
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "tp04/**"
-      - "infra/ksqldb/**"
-      - ".github/workflows/tp04.yml"
   workflow_dispatch:
 
 permissions:
