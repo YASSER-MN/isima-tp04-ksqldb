@@ -15,4 +15,6 @@ Seuls `tp04/`, `infra/ksqldb/tp04-extension-doublons.sql` et `.github/workflows/
 
 Les preuves sont écrites dans `preuves/tp04/`. `SYNTHESE.md` résume les mesures et pointe vers les fichiers bruts.
 
+Preuves du run utilisé dans le compte-rendu : [branche `results`, dossier `preuves/tp04/`](https://github.com/YASSER-MN/isima-tp04-ksqldb/tree/results/preuves/tp04).
+
 Sur GitHub Actions, le workflow `.github/workflows/tp04.yml` lance le même script sur `ubuntu-latest`, puis publie `preuves/tp04/` sur la branche `results`.
